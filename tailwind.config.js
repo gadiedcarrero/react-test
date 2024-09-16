@@ -22,9 +22,11 @@ module.exports = {
           '800': 800,
         },
         colors: {
-          loginBG: '#F5F9FF',
+          ligthBG: '#F5F9FF',
           heading: '#202244',
           text: '#545454',
+          customBlue: 'rgba(32, 34, 68, 0.8)',
+
         },
         boxShadow: {
           'custom': '1px 2px 10px rgba(0, 0, 0, 0.1)',

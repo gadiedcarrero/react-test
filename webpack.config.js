@@ -8,6 +8,10 @@ module.exports = {
     mode: process.env.NODE_ENV || 'development',
     resolve: {
         extensions: ['.tsx', '.ts', '.js'],
+        alias: {
+            '@': path.resolve(__dirname, 'src'),
+            '@assets': path.resolve(__dirname, 'public/assets'),
+        },
     },
     devServer: { historyApiFallback: true },
     module: {

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import AprenderLogo from "../../public/assets/aprender-logo.svg";
+import AprenderLogo from "@assets/aprender-logo.svg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGoogle, faMicrosoft } from "@fortawesome/free-brands-svg-icons";
 import { faArrowRight, faUser, faLock, faEye, faEyeSlash } from "@fortawesome/free-solid-svg-icons";
