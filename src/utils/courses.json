@@ -48,5 +48,45 @@
       "rating": 4.9,
       "status": "Pendiente",
       "image": "/assets/vegan.jpg"
+    },
+    {
+      "id": 6,
+      "isNew": true,
+      "title": "Cocina Vegetarina",
+      "description": "Aprende a preparar deliciosos platos vegetarianos.",
+      "category": "Saludable",
+      "rating": 4.9,
+      "status": "Pendiente",
+      "image": "/assets/vegan.jpg"
+    },
+    {
+      "id": 7,
+      "isNew": true,
+      "title": "Repostería Irlandesa",
+      "description": "Descubre los secretos de la repostería irlandesa.",
+      "category": "Repostería",
+      "rating": 3.8,
+      "status": "Completado",
+      "image": "/assets/french.jpg"
+    },
+    {
+      "id": 8,
+      "isNew": true,
+      "title": "Adminstracion Empresarial",
+      "description": "Administracion desde 0",
+      "category": "Administración",
+      "rating": 4.1,
+      "status": "Completado",
+      "image": "/assets/admin1.jpg"
+    },
+    {
+      "id": 9,
+      "isNew": true,
+      "title": "Adminstracion de Servicios",
+      "description": "Administracion desde 0",
+      "category": "Administración",
+      "rating": 4.2,
+      "status": "Completado",
+      "image": "/assets/admin2.jpg"
     }
   ]
