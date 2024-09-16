@@ -87,7 +87,7 @@ const Main: React.FC = () => {
 
       <section className="mt-10 w-full">
         <div className="flex items-center justify-between">
-          <h2 className="text-[18px] font-[600] ">Categorías</h2>
+          <h2 className="text-[18px] font-[600]">Categorías</h2>
           <button className="flex items-center text-textBtn font-bold">
             VER TODO
             <FontAwesomeIcon icon={faChevronRight} className="ml-1" />
@@ -97,7 +97,7 @@ const Main: React.FC = () => {
           {categories.map((category) => (
             <div
               key={category}
-              className={`text-[15px] font-[700] cursor-pointer transition-colors duration-300 ${
+              className={`text-[13px] font-[700] cursor-pointer transition-colors duration-300 ${
                 selectedCategory === category
                   ? "text-textBtn"
                   : "text-textCategories"

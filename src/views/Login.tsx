@@ -19,9 +19,9 @@ const Login: React.FC = () => {
 
   return (
     <div className=" mx-[34px] flex flex-col items-center">
-      <img src={AprenderLogo} alt="Aprender" className="mb-6" />
+      <img src={AprenderLogo} alt="Aprender" className="mb-4 mt-4" />
       <div className="flex flex-col self-start w-full max-w-md">
-        <h1 className="text-[24px] font-[600] mb-4">Ingreso</h1>
+        <h1 className="text-[24px] font-[600] mb-3">Ingreso</h1>
         <form className="flex flex-col space-y-4" onSubmit={handleLogin}>
           <div className="relative">
             <span className="absolute inset-y-0 left-0 flex items-center pl-3">
