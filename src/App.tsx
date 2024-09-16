@@ -1,12 +1,13 @@
-import  React from 'react';
-import Providers from './Providers';
+import React from "react";
+import Providers from "./Providers";
+import AppRoutes from "./routes";
 
 const App: React.FC = () => {
   return (
     <Providers>
-      <h1>Hello World!</h1>
+      <AppRoutes />
     </Providers>
   );
-}
+};
 
 export default App;

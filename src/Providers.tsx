@@ -17,7 +17,5 @@ const Providers: React.FC<ProviderProps> = ({children}) => (
     </QueryClientProvider>
   
 )
- 
-
 
 export default Providers;

@@ -1,0 +1,41 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+/* Estilos globales */
+html,
+body {
+  @apply bg-loginBG;
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  @apply font-mulish text-text;
+}
+
+/* Estilos para todos los headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @apply font-jost text-heading;
+}
+
+/* Ocultar el botón de mostrar/ocultar contraseña en Microsoft Edge */
+input[type="password"]::-ms-reveal {
+  display: none;
+}
+
+/* Ocultar el botón de mostrar/ocultar contraseña en Firefox */
+input[type="password"]::-moz-password-eye {
+  display: none;
+}
+
+/* Ocultar el botón de mostrar/ocultar contraseña en Safari y Chrome */
+input[type="password"]::-webkit-textfield-decoration-container {
+  display: none;
+}
