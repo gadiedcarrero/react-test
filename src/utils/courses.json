@@ -1,0 +1,52 @@
+[
+    {
+      "id": 1,
+      "isNew": true,
+      "title": "Curso de Cocina Italiana",
+      "description": "Aprende a preparar auténticas recetas italianas.",
+      "category": "Internacional",
+      "rating": 4.5,
+      "status": "Pendiente",
+      "image": "/assets/italian.jpg"
+    },
+    {
+      "id": 2,
+      "isNew": false,
+      "title": "Curso de Repostería Francesa",
+      "description": "Descubre los secretos de la repostería francesa.",
+      "category": "Repostería",
+      "rating": 4.8,
+      "status": "Completado",
+      "image": "/assets/french.jpg"
+    },
+    {
+      "id": 3,
+      "isNew": true,
+      "title": "Curso de Sushi Japonés",
+      "description": "Domina el arte del sushi con técnicas tradicionales.",
+      "category": "Internacional",
+      "rating": 4.7,
+      "status": "Pendiente",
+      "image": "/assets/japan.jpg"
+    },
+    {
+      "id": 4,
+      "isNew": false,
+      "title": "Curso de Cocina Mexicana",
+      "description": "Explora los sabores vibrantes de la cocina mexicana.",
+      "category": "Internacional",
+      "rating": 4.6,
+      "status": "Completado",
+      "image": "/assets/mexican.jpg"
+    },
+    {
+      "id": 5,
+      "isNew": true,
+      "title": "Curso de Cocina Vegana",
+      "description": "Aprende a preparar deliciosos platos veganos.",
+      "category": "Saludable",
+      "rating": 4.9,
+      "status": "Pendiente",
+      "image": "/assets/vegan.jpg"
+    }
+  ]
