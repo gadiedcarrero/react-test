@@ -36,6 +36,8 @@ module.exports = {
             patterns: [
                 { from: './public/404.html', to: '[name][ext]' },
                 { from: './public/favicon.ico', to: '[name][ext]' },
+                { from: './public/assets', to: 'assets' }
+                
             ],
         }),
         new HtmlWebpackPlugin({
