@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import LogoEspanol from "@assets/LogoEspanol.png";
 import Filters from "@assets/filter.svg";
-import { FaSearch } from "react-icons/fa"; // Asegúrate de tener react-icons instalado
+import { FaSearch } from "react-icons/fa";
 import CardCarousel from "@/components/cardCarousel/CardCarousel";
 import coursesData from "@/utils/courses.json";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -34,9 +34,7 @@ const Main: React.FC = () => {
   ];
 
   useEffect(() => {
-    // Simula una llamada a la API
     const fetchCourses = async () => {
-      // Aquí estamos simulando una llamada a la API usando datos locales
       setCourses(coursesData);
     };
 
