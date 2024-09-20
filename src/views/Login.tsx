@@ -4,17 +4,31 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGoogle, faMicrosoft } from "@fortawesome/free-brands-svg-icons";
 import { faArrowRight, faUser, faLock, faEye, faEyeSlash } from "@fortawesome/free-solid-svg-icons";
 import { useNavigate } from "react-router-dom";
+import { useMsal } from "@azure/msal-react";
+import { loginRequest } from "../authConfig";
 
 const Login: React.FC = () => {
-  const [showPassword, setShowPassword] = useState(false);
+
+  const { instance } = useMsal();
   const navigate = useNavigate();
+
+  const [showPassword, setShowPassword] = useState(false);
+
   const togglePasswordVisibility = () => {
     setShowPassword(!showPassword);
   };
 
+  
   const handleLogin = (event: React.FormEvent) => {
     event.preventDefault();
-    navigate("/welcome");
+    instance.loginPopup(loginRequest)
+      .then(response => {
+        console.log("Login successful:", response);
+        navigate("/welcome");
+      })
+      .catch(e => {
+        console.error(e);
+      });
   };
 
   return (
@@ -83,6 +97,7 @@ const Login: React.FC = () => {
             type="button"
             className="w-12 h-12 flex items-center justify-center rounded-full bg-blue-700 text-white shadow-custom"
             aria-label="Iniciar sesión con Microsoft"
+            onClick={handleLogin}
           >
             <FontAwesomeIcon icon={faMicrosoft} className="h-[21px] w-[21px]" />
           </button>

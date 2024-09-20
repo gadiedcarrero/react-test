@@ -1,13 +1,19 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { gsap } from "gsap";
 import imgPerfil from "@assets/Perfil.svg";
 import Loading from "@/components/loading/Loading";
 import AnimatedFigures from "@/components/animatedfigures/AnimatedFigures";
+import { useMsal } from "@azure/msal-react";
+import { loginRequest } from "../authConfig";
+import { callMsGraph, getUserPhoto } from "../graph";
 
 const Welcome: React.FC = () => {
   const navigate = useNavigate();
   const welcomeRef = useRef<HTMLDivElement>(null);
+  const { instance, accounts } = useMsal();
+  const [userName, setUserName] = useState("");
+  const [userPhoto, setUserPhoto] = useState(imgPerfil); // Default image
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -28,6 +34,28 @@ const Welcome: React.FC = () => {
     }
   }, []);
 
+  useEffect(() => {
+    if (accounts.length > 0) {
+      const request = {
+        ...loginRequest,
+        account: accounts[0],
+      };
+
+      instance.acquireTokenSilent(request).then((response) => {
+        callMsGraph(response.accessToken).then((response) => {
+          const firstName = response.displayName.split(" ")[0];
+          setUserName(firstName);
+        });
+
+        getUserPhoto(response.accessToken).then((photoUrl) => {
+          if (photoUrl) {
+            setUserPhoto(photoUrl);
+          }
+        });
+      });
+    }
+  }, [accounts, instance]);
+
   return (
     <div className="flex items-center justify-center h-screen bg-customBlue">
       <div
@@ -39,12 +67,12 @@ const Welcome: React.FC = () => {
             <AnimatedFigures />
           </div>
           <img
-            src={imgPerfil}
+            src={userPhoto}
             alt="Perfil"
             className="w-[153px] h-[153px] rounded-full z-10"
           />
         </div>
-        <h1 className="text-[24px] font-[600] mt-7 z-10">Bienvenido Carlos</h1>
+        <h1 className="text-[24px] font-[600] mt-7 z-10">Bienvenido {userName}</h1>
         <p className="text-[14px] font-[700] text-center mt-4">
           “La calidad empieza con la educación y termina con la educación”
         </p>
